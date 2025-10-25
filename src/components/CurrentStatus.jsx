@@ -1,8 +1,8 @@
-// src/components/CurrentStatus.js
-
-import React from 'react';
+import React from "react";
+import useScrollReveal from "../Hooks/useScrollReveal";
 
 const CurrentStatus = () => {
+  useScrollReveal(".current-status", { origin: "left" });
     return (
         <section className="section" id="currently">
             <div className="top-header">

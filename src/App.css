@@ -216,12 +216,23 @@ nav.scrolled {
 .featured-name{
     font-size: 40px;
     font-weight: 600;
+    white-space: nowrap;
     color: var(--text-color-second);
     margin-block: 20px;
 }
 .typedText{
+    min-width: 300px;
     text-transform: capitalize;
     color: var(--text-color-third);
+}
+
+.featured-name p {
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* If the element is H2/H1, use the appropriate selector */
+.featured-name h2 {
+    white-space: nowrap;
 }
 .featured-text-info{
     font-size: 15px;
@@ -602,6 +613,8 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 150px;
+    margin: 0 auto;
     background: var(--second-color);
     color: var(--color-white);
 }
@@ -983,3 +996,16 @@ h1 {
  b{
     color: rgb(206, 76, 20);
  }
+ .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.header.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+}

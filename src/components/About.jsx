@@ -1,8 +1,11 @@
 // src/components/About.js
-
-import React from 'react';
+import React from "react";
+import useScrollReveal from "../Hooks/useScrollReveal";
 
 const About = () => {
+  useScrollReveal(".about-section", { origin: "bottom" });
+
+  
     return (
         <section className="section" id="about">
             <div className="top-header">
@@ -17,7 +20,7 @@ const About = () => {
                         </p>
                         <div className="about-btn">
                             {/* Updated path to correctly reference the file in your public/assets/images folder */}
-                            <a href="/assets/images/ambryedinorginals .pdf" className="btn" download>
+                            <a href="/assets/images/ambryedinorginals.pdf" className="btn" download>
                                 DOWNLOAD MY RESUME <i className="uil uil-import"></i>
                             </a>
                         </div>
