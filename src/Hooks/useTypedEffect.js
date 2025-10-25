@@ -6,7 +6,7 @@ const useTypedEffect = (elementRef, strings, typeSpeed = 100, backSpeed = 80, ba
     if (!elementRef.current) return;
 
     const typed = new Typed(elementRef.current, {
-      strings: ["Frontend Developer", "UI/UX Designer"],
+      strings: ["Frontend Developer", "UI/UX Enthusiast"],
       typeSpeed: 100,
       backSpeed: 80,
       backDelay: 1000,
