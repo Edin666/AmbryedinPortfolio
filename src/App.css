@@ -154,6 +154,7 @@ nav.scrolled {
     text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
+    font-size: 20px;
     padding-inline: 15px;
     margin-inline: 20px;
 }
@@ -210,11 +211,11 @@ nav.scrolled {
     background: var(--third-color);
     color: var(--color-white);
     padding: 5px 10px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
 }
 .featured-name{
-    font-size: 56px;
+    font-size: 50px;
     font-weight: 600;
     white-space: nowrap;
     color: var(--text-color-second);
@@ -380,7 +381,7 @@ h3{
 }
 .about-info p {
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     color: #000000;
     margin-bottom: 20px;
 }
@@ -990,10 +991,12 @@ textarea{
 
 h1 {
     text-align: center;
+    font-size: 40px;
 }
 @media only screen and (max-width: 540px) {
     h1 {
         text-align: center;
+
     }
 }
  b{
