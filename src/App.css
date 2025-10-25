@@ -209,16 +209,16 @@ nav.scrolled {
 .featured-text-card span{
     background: var(--third-color);
     color: var(--color-white);
-    padding: 3px 8px;
-    font-size: 12px;
+    padding: 5px 10px;
+    font-size: 16px;
     border-radius: 5px;
 }
 .featured-name{
-    font-size: 40px;
+    font-size: 56px;
     font-weight: 600;
     white-space: nowrap;
     color: var(--text-color-second);
-    margin-block: 20px;
+    margin-block: 25px;
 }
 .typedText{
     min-width: 300px;
@@ -235,8 +235,8 @@ nav.scrolled {
     white-space: nowrap;
 }
 .featured-text-info{
-    font-size: 15px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 40px;
     color: var(--text-color-second);
 }
 .featured-text-btn{
@@ -260,12 +260,15 @@ nav.scrolled {
     justify-content: center;
     align-items: center;
     background-color: #fdfdfcd8;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     color: #000; /* Ensure icon is black/visible */
+}
+.social_icons .icon i {
+    font-size: 28px;
 }
 .icon:hover{
     color: rgb(4, 4, 0);
