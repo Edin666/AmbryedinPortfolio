@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 // ⚠️ IMPORTANT: Paste your entire style.css content into src/App.css
 import './App.css'; 
+import useLegacyAnimations from './Hooks/useLegacyAnimations';
 
 // Component Imports
-import Header from './components/Header';
-import FeaturedBox from './components/FeaturedBox';
-import About from './components/About';
-import CurrentStatus from './components/CurrentStatus';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from './components/Header.jsx';
+import FeaturedBox from './components/FeaturedBox.jsx';
+import About from './components/About.jsx';
+import CurrentStatus from './components/CurrentStatus.jsx';
+import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 
 // ScrollReveal must be installed: npm install scrollreveal
 const useScrollReveal = () => {
@@ -25,7 +26,7 @@ const useScrollReveal = () => {
             // Replicate original main.js ScrollReveal calls
             sr.reveal('.featured-text', { delay: 100 });
             sr.reveal('.featured-image', { delay: 300 });
-            sr.reveal('.scroll-icon-box', { delay: 100 });
+            sr.reveal('.scroll-icon-box', { delay: 300 });
             
             // Left/Right reveals
             const srLeft = window.ScrollReveal({ origin: 'left', distance: '80px', duration: 2000, reset: true });
@@ -43,6 +44,7 @@ const useScrollReveal = () => {
 
 const App = () => {
     // Run the ScrollReveal logic once after the component mounts
+    useLegacyAnimations();
     useScrollReveal();
 
     return (

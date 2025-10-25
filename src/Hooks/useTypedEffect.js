@@ -1,26 +1,31 @@
+// src/Hooks/useTypedEffect.js (UPDATED)
+
 import { useEffect } from 'react';
 import Typed from 'typed.js'; 
 
-/**
- * Custom hook to initialize the Typed.js effect on a specific element.
- * @param {React} elementRef - Ref object pointing to the element (e.g., <span ref={ref} />).
- * @param {string[]} strings - Array of strings to cycle through.
- */
-export const useTypedEffect = (elementRef, strings) => {
-  useEffect(() => {
-    const options = {
-      strings: strings,
-      loop: true,
-      typeSpeed: 30,
-      backSpeed: 20,
-      backDelay: 300,
-    };
+// Now accepts typeSpeed and backSpeed as arguments with default values
+export const useTypedEffect = (elementRef, strings, typeSpeed = 100, backSpeed = 50) => {
+  useEffect(() => {
+    const options = {
+      strings: strings,
+      loop: true,
+      
+      // Use the arguments passed to the hook, or the default values
+      typeSpeed: typeSpeed, // <-- Uses the argument!
+      backSpeed: backSpeed, // <-- Uses the argument!
+      
+      backDelay: 1000,
+      startDelay: 500,  
+      showCursor: true, 
 
-    const typed = new Typed(elementRef.current, options);
+      preStringTyped: (arrayPos, self) => {},
+    };
 
-    // Cleanup: Destroy Typed instance when the component unmounts
-    return () => {
-      typed.destroy();
-    };
-  }, [elementRef, strings]);
+    const typed = new Typed(elementRef.current, options);
+
+    return () => {
+      typed.destroy();
+    };
+    // Include all props in dependency array to ensure Typed is updated when they change
+  }, [elementRef, strings, typeSpeed, backSpeed]); 
 };

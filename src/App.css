@@ -261,6 +261,7 @@ nav.scrolled {
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
+/* ----- FEATURED IMAGE BOX ----- */
 .featured-image{
     display: flex;
     justify-content: right;
@@ -268,17 +269,21 @@ nav.scrolled {
     min-height: 90vh;
     width: 50%;
 }
+
 .image{
     margin: auto 0;
+    /* 🛠️ FIX: Make the container height match the image height */
     width: 380px;
-    height: 390px;
+    height: 380px; /* Changed from 390px to 380px */
     border-radius: 55% 45% 55% 45%;
     overflow: hidden;
     animation: imgFloat 7s ease-in-out infinite;
 }
+
 .image img{
-    width: 380px;
-    height: 380px;
+    /* 🛠️ FIX: Use 100% height and width to guarantee it fills the parent */
+    width: 100%;  /* Ensures it fills the 380px width */
+    height: 100%; /* Ensures it fills the 380px height */
     object-fit: cover;
 }
 
@@ -351,7 +356,7 @@ h3{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-block: 30px 70px;
+    padding-block: 20px 50px;
     padding-inline: 20px;
     width: 100%;
     margin-top: 20px;
@@ -395,16 +400,20 @@ h3{
 .skills-list{
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px; /* Increased gap for better spacing */
 }
 .skills-list span{
     font-size: 14px;
     background: black;
     color: var(--color-white);
-    padding: 2px 10px;
+    padding: 5px 12px; /* Increased padding */
     border-radius: 5px;
+    transition: 0.3s;
 }
-
+.skills-list span:hover {
+    background:rgb(2, 141, 95);
+    color: var(--text-dark);
+}
 
     /* ===== Project Container ===== */
     .project-container {

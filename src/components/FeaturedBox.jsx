@@ -4,8 +4,7 @@ import { useTypedEffect } from '../Hooks/useTypedEffect';
 const FeaturedBox = () => {
   const typedTextRef = useRef(null);
 
-  
-  useTypedEffect(typedTextRef, ["Frontend Developer", "UI/UX Enthusiast"], 30, 20);
+  useTypedEffect(typedTextRef, ["Frontend Developer", "UI/UX Enthusiast"]);
 
   return (
     <section className="featured-box" id="home">
