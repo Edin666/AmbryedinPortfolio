@@ -26,9 +26,6 @@ html{
     scroll-behavior: smooth;
 }
 
-.js-scroll{
-    scroll-behavior: auto;
-}
 /* ----- SCROLLBAR DESIGN ----- */
 ::-webkit-scrollbar{
     width: 10px;
@@ -70,29 +67,29 @@ i{
 
 /* ------- BASE -------- */
 body {
-    height: 100vh;
-    margin: 0;
-    background: linear-gradient(
-      270deg,
-      #0a0f2f,
-      #1a1b4d,
-      #3b0072,
-      #6a0cff,
-      #00d4ff,
-      #f72585,
-      #2a0050,
-      #0a0f2f,
-      #4c0a8f,
-      #12002f
-    );
-    background-size: 400% 400%;
-    animation: cosmicFlow 15s ease infinite;
-    color: white;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    270deg,
+    #0a0f2f,
+    #1a1b4d,
+    #3b0072,
+    #6a0cff,
+    #00d4ff,
+    #f72585,
+    #2a0050,
+    #0a0f2f,
+    #4c0a8f,
+    #12002f
+  );
+  background-size: 400% 400%;
+  animation: cosmicFlow 15s ease infinite;
+  color: white;
 }
 @keyframes cosmicFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container{
@@ -120,14 +117,6 @@ nav{
     transition: .3s;
     z-index: 100;
 }
-
-/* Class added to header when scrolled */
-nav.scrolled { 
-    height: 70px; /* Example: shrink height */
-    line-height: 70px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1); /* Example: add shadow */
-}
-
 .nav-logo{
    position: relative;
 }
@@ -154,7 +143,6 @@ nav.scrolled {
     text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
-    font-size: 20px;
     padding-inline: 15px;
     margin-inline: 20px;
 }
@@ -164,7 +152,6 @@ nav.scrolled {
 .nav-menu-btn i{
     font-size: 28px;
     cursor: pointer;
-    color: var(--color-white); /* Ensure icon is visible against dark header */
 }
 .active-link{
     position: relative;
@@ -210,34 +197,24 @@ nav.scrolled {
 .featured-text-card span{
     background: var(--third-color);
     color: var(--color-white);
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 3px 8px;
+    font-size: 12px;
     border-radius: 5px;
 }
 .featured-name{
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 600;
-    white-space: nowrap;
     color: var(--text-color-second);
-    margin-block: 25px;
+    margin-block: 20px;
 }
 .typedText{
-    min-width: 300px;
     text-transform: capitalize;
+    font-size: 45px;
     color: var(--text-color-third);
 }
-
-.featured-name p {
-    white-space: nowrap; /* Prevents text from wrapping */
-}
-
-/* If the element is H2/H1, use the appropriate selector */
-.featured-name h2 {
-    white-space: nowrap;
-}
 .featured-text-info{
-    font-size: 18px;
-    margin-bottom: 40px;
+    font-size: 15px;
+    margin-bottom: 30px;
     color: var(--text-color-second);
 }
 .featured-text-btn{
@@ -261,20 +238,15 @@ nav.scrolled {
     justify-content: center;
     align-items: center;
     background-color: #fdfdfcd8;
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    color: #000; /* Ensure icon is black/visible */
-}
-.social_icons .icon i {
-    font-size: 28px;
 }
 .icon:hover{
     color: rgb(4, 4, 0);
 }
-
 
 /* ----- FEATURED IMAGE BOX ----- */
 .featured-image{
@@ -284,21 +256,17 @@ nav.scrolled {
     min-height: 90vh;
     width: 50%;
 }
-
 .image{
     margin: auto 0;
-    /* 🛠️ FIX: Make the container height match the image height */
     width: 380px;
-    height: 380px; /* Changed from 390px to 380px */
+    height: 390px;
     border-radius: 55% 45% 55% 45%;
     overflow: hidden;
     animation: imgFloat 7s ease-in-out infinite;
 }
-
 .image img{
-    /* 🛠️ FIX: Use 100% height and width to guarantee it fills the parent */
-    width: 100%;  /* Ensures it fills the 380px width */
-    height: 100%; /* Ensures it fills the 380px height */
+    width: 380px;
+    height: 380px;
     object-fit: cover;
 }
 
@@ -321,7 +289,7 @@ nav.scrolled {
         border-radius: 45% 55% 45% 55%;
     }
 }
-/* .scroll-btn{
+.scroll-btn{
    position: absolute;
    bottom: 0;
    left: 50%;
@@ -340,11 +308,11 @@ nav.scrolled {
 }
 .scroll-btn i{
     font-size: 20px;
-}*/
+}
 
 /* ----- MAIN BOX ----- */
 .section{
-    padding-block: 3em;
+    padding-block: 5em;
 }
 .row{
     display: flex;
@@ -364,71 +332,6 @@ h3{
     margin-bottom: 15px;
 }
 
-/* ----- ABOUT INFO ----- */
-.about-info {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-block: 20px 50px;
-    padding-inline: 20px;
-    width: 100%;
-    margin-top: 20px;
-    background: blanchedalmond;
-    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
-    border-radius: 20px;
-}
-.about-info p {
-    text-align: center;
-    font-size: 18px;
-    color: #000000;
-    margin-bottom: 20px;
-}
-.about-btn {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.about-btn .btn {
-    display: inline-block;
-    background-color: #0e7962;
-    color: #f0eaea;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-.about-btn .btn:hover {
-    background-color: #430cea;
-}
-
-/* ----- SKILLS BOX ----- */
-.skills-box{
-    margin: 20px;
-}
-.skills-header{
-    margin-bottom: 30px;
-}
-.skills-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Increased gap for better spacing */
-}
-.skills-list span{
-    font-size: 14px;
-    background: black;
-    color: var(--color-white);
-    padding: 5px 12px; /* Increased padding */
-    border-radius: 5px;
-    transition: 0.3s;
-}
-.skills-list span:hover {
-    background:rgb(2, 141, 95);
-    color: var(--text-dark);
-}
 
     /* ===== Project Container ===== */
     .project-container {
@@ -448,7 +351,6 @@ h3{
       justify-content: center;
       align-items: center;
       width: 30%;
-      margin-top: 30px;
       min-width: 280px;
       height: 250px;
       background: blanchedalmond;
@@ -617,8 +519,6 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    margin: 0 auto;
     background: var(--second-color);
     color: var(--color-white);
 }
@@ -631,8 +531,6 @@ textarea{
 }
 
 /* ===== FOOTER BASE ===== */
-    /* NOTE: We're keeping the body/html styles here, but React is the primary renderer. */
-    /* The body styles here conflict with minimal index.css, but we keep them for your original design intent. */
     html, body {
       height: 100%;
       margin: 0;
@@ -707,8 +605,7 @@ textarea{
     /* ===== SOCIAL ICONS ===== */
     .social_icons {
       display: flex;
-      /* NOTE: Original was 'justify-content: left;' which is non-standard. Using 'flex-start' for modern browsers. */
-      justify-content: flex-start; 
+      justify-content: left;
       align-items: center;
       gap: 25px;
       margin-top: 10px;
@@ -821,23 +718,13 @@ textarea{
         justify-content: center;
         height: auto;
     }
-    /* Mobile Fixes (Text Wrapping and Padding) */
     .featured-text{
         width: 100%;
         order: 2;
         justify-content: center;
         align-content: flex-start;
         min-height: auto;
-        padding-inline: 5vw; 
     }
-    .featured-name{
-        font-size: 35px;
-        white-space: normal;
-    }
-    .featured-name p {
-        white-space: normal;
-    }
-    
     .social_icons{
         margin-top: 2em;
     }
@@ -878,18 +765,8 @@ textarea{
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 @media only screen and (max-width: 540px){
     .featured-name{
-        font-size: 30px; 
+        font-size: 40px;
     }
-    /* Shrink skill headers and tags */
-    h3{
-        font-size: 16px; 
-        margin-bottom: 8px; 
-    }
-    .skills-list span{
-        font-size: 11px; 
-        padding: 3px 8px; 
-    }
-    
     .project-box{
         width: 100%;
     }
@@ -1011,27 +888,171 @@ textarea{
 
 h1 {
     text-align: center;
-    font-size: 40px;
 }
 @media only screen and (max-width: 540px) {
     h1 {
         text-align: center;
-
     }
 }
-b{
+ b{
     color: rgb(206, 76, 20);
-}
-.header {
-    position: fixed;
+ }
+
+/* ----- ABOUT INFO ----- */
+.about-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
     width: 100%;
-    top: 0;
-    transition: all 0.3s ease;
-    z-index: 999;
+    background: blanchedalmond;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border-radius: 20px;
 }
 
-.header.shadow {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
+.about-info p {
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.about-btn .btn {
+    display: inline-block;
+    background-color: #0e7962;
+    color: #f0eaea;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about-btn .btn:hover {
+    background-color: #430cea;
+}
+
+/* ----- SKILLS BOX ----- */
+.skills-box {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.skills-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-header h2 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.skills-list span {
+    font-size: 14px;
+    background: black;
+    color: var(--color-white);
+    padding: 4px 12px;
+    border-radius: 5px;
+}
+
+/*  MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .about-info {
+        padding-block: 20px 40px;
+        padding-inline: 10px;
+    }
+
+    .skills-box {
+        width: 100%;
+        margin: 8px 0;
+        padding: 15px;
+    }
+
+    .skills-header {
+        margin-bottom: 15px;
+    }
+
+    .skills-header h2 {
+        font-size: 1rem;
+    }
+
+    .skills-list {
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .skills-list span {
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+}
+
+/* ----- SKILLS SECTION FIX ----- */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .about-info {
+    margin-bottom: 25px;
+  }
+
+  .skills-container {
+    width: 100%;
+  }
+
+  .skills-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skills-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .skills-box h2 {
+    font-size: 1rem;
+  }
+
+  .skills-list span {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
 }
